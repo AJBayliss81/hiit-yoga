@@ -5,7 +5,7 @@ html {
 .image-banner-container {
     background: url('/media/yoga-banner-crop.jpg') no-repeat center center;
     background-size: cover;
-    height: 25vh;
+    height: 35vh;
 }
 
 /* from Bulma */
@@ -79,5 +79,17 @@ html {
 
     .header-container {
         padding-top: 120px;
+    }
+}
+
+/* Display background whole screen on small mobile */
+@media (max-width: 370px) {
+    .image-banner-container {
+        background: url('/media/yoga-banner-crop.jpg') no-repeat center center;
+        background-size: contain;
+        position: relative;
+        top: 105px;
+        left: 0;
+        right: 0;
     }
 }
