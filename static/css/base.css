@@ -58,6 +58,17 @@ html {
     background-color: yellow;
 }
 
+.content-container {
+    position: relative;
+    top: 50px;
+}
+
+.product-image {
+    height: 40vh;
+    width: 30vh;
+    object-fit: cover;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
@@ -82,8 +93,16 @@ html {
     }
 }
 
+/* push content down page below navbar on smaller screens*/
+@media (max-width: 992px) {
+    .content-container {
+        position: relative;
+        top: 100px;
+    }
+}
+
 /* Display background whole screen on small mobile */
-@media (max-width: 370px) {
+@media (max-width: 400px) {
     .image-banner-container {
         background: url('/media/yoga-banner-crop.jpg') no-repeat center center;
         background-size: contain;
@@ -92,4 +111,11 @@ html {
         left: 0;
         right: 0;
     }
+
+    /* push content down page below navbar on smaller screens*/
+    .content-container {
+        position: relative;
+        top: 200px;
+    }
+
 }
