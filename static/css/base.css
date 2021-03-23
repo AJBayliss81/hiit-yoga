@@ -63,9 +63,17 @@ html {
     top: 50px;
 }
 
+/* Product images */
+
 .product-image {
     height: 40vh;
     width: 30vh;
+    object-fit: cover;
+}
+
+.product-detail-image {
+    height: 60vh;
+    width: 50vh;
     object-fit: cover;
 }
 
@@ -95,27 +103,35 @@ html {
 
 /* push content down page below navbar on smaller screens*/
 @media (max-width: 992px) {
-    .content-container {
-        position: relative;
-        top: 100px;
+    
+    .header-container {
+        padding-top: 100px;
+    }
+
+    body {
+        height: calc(100vh - 100px);
     }
 }
 
-/* Display background whole screen on small mobile */
+/* Display background whole width on small mobile */
 @media (max-width: 400px) {
     .image-banner-container {
         background: url('/media/yoga-banner-crop.jpg') no-repeat center center;
         background-size: contain;
         position: relative;
-        top: 105px;
-        left: 0;
-        right: 0;
+        top: -8.5vh;
     }
 
-    /* push content down page below navbar on smaller screens*/
-    .content-container {
+    /* Pull the content of the index page up on very small screens */
+    .small-image-container {
         position: relative;
-        top: 200px;
+        top: -100px;
+    }
+
+    /* Alter the nav button padding to prevent dropping to two lines on very small screens */
+    .nav-link {
+        padding-right: 4px;
+        padding-left: 4px;
     }
 
 }
